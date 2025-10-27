@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Unsolvable Slider',
-  description: 'A 6x6 sliding puzzle that is guaranteed to be unsolvable.',
+  title: 'Slider Puzzle Challenge',
+  description: 'A 6x6 sliding puzzle. Can you solve it?',
 };
 
 export default function RootLayout({

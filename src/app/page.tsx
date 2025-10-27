@@ -90,7 +90,7 @@ export default function Home() {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8">
         <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary mb-8 tracking-wider">
-          Unsolvable Slider
+          Slider Challenge
         </h1>
         <div className="grid grid-cols-6 gap-2 p-2 rounded-lg bg-card border-2 border-primary/20 shadow-lg" style={{width: 'min(90vw, 600px)', aspectRatio: '1 / 1'}}>
             {Array.from({ length: TILE_COUNT }).map((_, i) => (
@@ -98,7 +98,7 @@ export default function Home() {
             ))}
         </div>
          <p className="mt-8 text-muted-foreground text-center max-w-md">
-            Initializing unsolvable puzzle...
+            Initializing puzzle...
         </p>
       </main>
     );
@@ -107,7 +107,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8 select-none">
       <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary mb-8 tracking-wider">
-        Unsolvable Slider
+        Slider Challenge
       </h1>
       <div className="grid grid-cols-6 gap-2 p-2 rounded-lg bg-card border-2 border-primary/20 shadow-lg" style={{width: 'min(90vw, 600px)', aspectRatio: '1 / 1'}}>
         {tiles.map((tile, index) => {
@@ -132,7 +132,7 @@ export default function Home() {
         })}
       </div>
        <p className="mt-8 text-muted-foreground text-center max-w-md">
-        This 6x6 sliding puzzle has been mathematically generated to be unsolvable. Good luck.
+        Try to solve it and get the flag. Good luck.
       </p>
     </main>
   );
