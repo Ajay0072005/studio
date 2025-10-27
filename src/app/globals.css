@@ -80,9 +80,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: url("https://storage.googleapis.com/aifirebase-styles-wallpapers/matrix.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ctext x='0' y='10' font-family='monospace' font-size='10' fill='%230affff' opacity='0.1'%3E01010101%3C/text%3E%3Ctext x='0' y='20' font-family='monospace' font-size='10' fill='%230affff' opacity='0.1'%3E10101010%3C/text%3E%3Ctext x='0' y='30' font-family='monospace' font-size='10' fill='%230affff' opacity='0.1'%3E01010101%3C/text%3E%3Ctext x='0' y='40' font-family='monospace' font-size='10' fill='%230affff' opacity='0.1'%3E10101010%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
   }
 }
