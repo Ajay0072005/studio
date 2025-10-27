@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%;
+    --background: 220 40% 5%;
     --foreground: 150 100% 80%;
-    --card: 240 15% 8%;
+    --card: 220 30% 10%;
     --card-foreground: 150 100% 80%;
-    --popover: 240 10% 4%;
+    --popover: 220 40% 5%;
     --popover-foreground: 150 100% 80%;
     --primary: 180 100% 50%;
-    --primary-foreground: 240 10% 4%;
-    --secondary: 240 10% 15%;
+    --primary-foreground: 220 40% 5%;
+    --secondary: 220 20% 15%;
     --secondary-foreground: 150 100% 80%;
-    --muted: 240 10% 12%;
+    --muted: 220 15% 20%;
     --muted-foreground: 150 80% 60%;
     --accent: 120 100% 50%;
-    --accent-foreground: 240 10% 4%;
+    --accent-foreground: 220 40% 5%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 10% 20%;
-    --input: 240 10% 15%;
+    --border: 220 20% 25%;
+    --input: 220 20% 15%;
     --ring: 180 100% 50%;
     --chart-1: 180 70% 50%;
     --chart-2: 150 60% 45%;
@@ -39,24 +39,24 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 240 10% 4%;
+    --background: 220 40% 5%;
     --foreground: 150 100% 80%;
-    --card: 240 15% 8%;
+    --card: 220 30% 10%;
     --card-foreground: 150 100% 80%;
-    --popover: 240 10% 4%;
+    --popover: 220 40% 5%;
     --popover-foreground: 150 100% 80%;
     --primary: 180 100% 50%;
-    --primary-foreground: 240 10% 4%;
-    --secondary: 240 10% 15%;
+    --primary-foreground: 220 40% 5%;
+    --secondary: 220 20% 15%;
     --secondary-foreground: 150 100% 80%;
-    --muted: 240 10% 12%;
+    --muted: 220 15% 20%;
     --muted-foreground: 150 80% 60%;
     --accent: 120 100% 50%;
-    --accent-foreground: 240 10% 4%;
+    --accent-foreground: 220 40% 5%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 10% 20%;
-    --input: 240 10% 15%;
+    --border: 220 20% 25%;
+    --input: 220 20% 15%;
     --ring: 180 100% 50%;
     --chart-1: 180 70% 50%;
     --chart-2: 150 60% 45%;
@@ -80,5 +80,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2300ffff' fill-opacity='0.1'%3E%3Ctext x='0' y='10' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='10' y='20' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3Ctext x='20' y='30' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='30' y='40' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3Ctext x='40' y='50' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='50' y='60' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3Ctext x='60' y='70' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='70' y='80' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3C/g%3E%3C/svg%3E");
   }
 }
