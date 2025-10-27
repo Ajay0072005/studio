@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 220 40% 5%;
-    --foreground: 150 100% 80%;
-    --card: 220 30% 10%;
-    --card-foreground: 150 100% 80%;
-    --popover: 220 40% 5%;
-    --popover-foreground: 150 100% 80%;
-    --primary: 180 100% 50%;
-    --primary-foreground: 220 40% 5%;
-    --secondary: 220 20% 15%;
-    --secondary-foreground: 150 100% 80%;
-    --muted: 220 15% 20%;
-    --muted-foreground: 150 80% 60%;
-    --accent: 120 100% 50%;
-    --accent-foreground: 220 40% 5%;
-    --destructive: 0 84% 60%;
+    --background: 0 0% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 173 97% 48%;
+    --primary-foreground: 173 100% 5%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 140 80% 50%;
+    --accent-foreground: 140 100% 5%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 20% 25%;
-    --input: 220 20% 15%;
-    --ring: 180 100% 50%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 173 97% 48%;
     --chart-1: 180 70% 50%;
     --chart-2: 150 60% 45%;
     --chart-3: 120 80% 55%;
@@ -39,25 +39,25 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 220 40% 5%;
-    --foreground: 150 100% 80%;
-    --card: 220 30% 10%;
-    --card-foreground: 150 100% 80%;
-    --popover: 220 40% 5%;
-    --popover-foreground: 150 100% 80%;
-    --primary: 180 100% 50%;
-    --primary-foreground: 220 40% 5%;
-    --secondary: 220 20% 15%;
-    --secondary-foreground: 150 100% 80%;
-    --muted: 220 15% 20%;
-    --muted-foreground: 150 80% 60%;
-    --accent: 120 100% 50%;
-    --accent-foreground: 220 40% 5%;
-    --destructive: 0 84% 60%;
+    --background: 0 0% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 173 97% 48%;
+    --primary-foreground: 173 100% 5%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 140 80% 50%;
+    --accent-foreground: 140 100% 5%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 20% 25%;
-    --input: 220 20% 15%;
-    --ring: 180 100% 50%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 173 97% 48%;
     --chart-1: 180 70% 50%;
     --chart-2: 150 60% 45%;
     --chart-3: 120 80% 55%;
@@ -80,6 +80,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%2300ffff' fill-opacity='0.1'%3E%3Ctext x='10' y='10' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='10' y='20' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3Ctext x='10' y='30' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='10' y='40' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3Ctext x='10' y='50' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='10' y='60' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3Ctext x='10' y='70' font-family='monospace' font-size='10'%3E01010101%3C/text%3E%3Ctext x='10' y='80' font-family='monospace' font-size='10'%3E10101010%3C/text%3E%3Ctext x='50' y='15' font-family='monospace' font-size='10'%3E11001100%3C/text%3E%3Ctext x='50' y='25' font-family='monospace' font-size='10'%3E00110011%3C/text%3E%3Ctext x='50' y='35' font-family='monospace' font-size='10'%3E11001100%3C/text%3E%3Ctext x='50' y='45' font-family='monospace' font-size='10'%3E00110011%3C/text%3E%3Ctext x='50' y='55' font-family='monospace' font-size='10'%3E11001100%3C/text%3E%3Ctext x='50' y='65' font-family='monospace' font-size='10'%3E00110011%3C/text%3E%3Ctext x='50' y='75' font-family='monospace' font-size='10'%3E11001100%3C/text%3E%3Ctext x='50' y='85' font-family='monospace' font-size='10'%3E00110011%3C/text%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("https://storage.googleapis.com/aifirebase-styles-wallpapers/matrix.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
 }
