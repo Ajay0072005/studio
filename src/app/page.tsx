@@ -61,12 +61,13 @@ export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // This runs only on the client, after hydration
-    setIsClient(true);
+    // This runs only on the client, after hydration, to prevent mismatch
     setTiles(createUnsolvablePuzzle());
+    setIsClient(true);
   }, []);
 
   const handleTileClick = (index: number) => {
+    if (!isClient) return;
     const emptyTileIndex = tiles.indexOf(0);
     
     // Calculate row and col for both tiles
@@ -85,54 +86,41 @@ export default function Home() {
     }
   };
 
-  // Render a loading skeleton on the server and initial client render to avoid hydration mismatch
-  if (!isClient) {
-    return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8">
-        <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary mb-8 tracking-wider">
-          Slider Challenge
-        </h1>
-        <div className="grid grid-cols-6 gap-2 p-2 rounded-lg bg-card border-2 border-primary/20 shadow-lg" style={{width: 'min(90vw, 600px)', aspectRatio: '1 / 1'}}>
-            {Array.from({ length: TILE_COUNT }).map((_, i) => (
-                <div key={i} className="bg-background/50 rounded-md animate-pulse"></div>
-            ))}
-        </div>
-         <p className="mt-8 text-muted-foreground text-center max-w-md">
-            Initializing puzzle...
-        </p>
-      </main>
-    );
-  }
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8 select-none">
       <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary mb-8 tracking-wider">
         Slider Challenge
       </h1>
       <div className="grid grid-cols-6 gap-2 p-2 rounded-lg bg-card border-2 border-primary/20 shadow-lg" style={{width: 'min(90vw, 600px)', aspectRatio: '1 / 1'}}>
-        {tiles.map((tile, index) => {
-          const isEmpty = tile === 0;
-          return (
-            <Button
-              key={index}
-              onClick={() => handleTileClick(index)}
-              variant="secondary"
-              className={cn(
-                "w-full h-full text-xl md:text-2xl lg:text-3xl font-bold font-headline rounded-md transition-all duration-300 ease-in-out focus:ring-accent focus:ring-2",
-                isEmpty
-                  ? "bg-transparent border-none shadow-none pointer-events-none"
-                  : "bg-secondary hover:bg-muted text-primary shadow-[0_0_2px_hsl(var(--primary)/0.5),inset_0_0_2px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_15px_hsl(var(--primary)/0.7)] hover:-translate-y-1"
-              )}
-              aria-label={`Tile ${tile || 'Empty'}`}
-              disabled={isEmpty}
-            >
-              {!isEmpty ? tile : ""}
-            </Button>
-          );
-        })}
+        {!isClient ? (
+             Array.from({ length: TILE_COUNT }).map((_, i) => (
+                <div key={i} className="bg-background/50 rounded-md animate-pulse"></div>
+            ))
+        ) : (
+            tiles.map((tile, index) => {
+              const isEmpty = tile === 0;
+              return (
+                <Button
+                  key={index}
+                  onClick={() => handleTileClick(index)}
+                  variant="secondary"
+                  className={cn(
+                    "w-full h-full text-xl md:text-2xl lg:text-3xl font-bold font-headline rounded-md transition-all duration-300 ease-in-out focus:ring-accent focus:ring-2",
+                    isEmpty
+                      ? "bg-transparent border-none shadow-none pointer-events-none"
+                      : "bg-secondary hover:bg-muted text-primary shadow-[0_0_2px_hsl(var(--primary)/0.5),inset_0_0_2px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_15px_hsl(var(--primary)/0.7)] hover:-translate-y-1"
+                  )}
+                  aria-label={`Tile ${tile || 'Empty'}`}
+                  disabled={isEmpty}
+                >
+                  {!isEmpty ? tile : ""}
+                </Button>
+              );
+            })
+        )}
       </div>
        <p className="mt-8 text-muted-foreground text-center max-w-md">
-        Try to solve it and get the flag. Good luck.
+        {!isClient ? "Initializing puzzle..." : "Try to solve it and get the flag. Good luck."}
       </p>
     </main>
   );
