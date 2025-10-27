@@ -95,7 +95,7 @@
     background-color: hsl(var(--background));
   }
   .matrix-rain::before {
-    content: "0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1";
+    content: "0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 1";
     position: absolute;
     top: 0;
     left: 0;
@@ -107,11 +107,11 @@
     word-break: break-all;
     white-space: pre-wrap;
     line-height: 1.2;
-    animation: matrix-scroll 20s linear infinite;
+    animation: matrix-scroll 60s linear infinite;
   }
 
   @keyframes matrix-scroll {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(0); }
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0%); }
   }
 }
